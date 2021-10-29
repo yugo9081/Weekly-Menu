@@ -18,25 +18,25 @@
   </section>
   <div class="bottom">
   <div class="left">
-    <button class="butt butt1 monday">M</button>
-    <button class="butt butt2 tuesday">T</button>
-    <button class="butt butt1 wednesday">W</button>
-    <button class="butt butt2 thursday">Th</button>
-    <button class="butt butt1 friday">F</button>
-    <button class="butt butt2 saturday">Sa</button>
-    <button class="butt butt1 sunday">S</button>
+    <button class="butt butt1" id="monday">M</button>
+    <button class="butt butt2" id="tuesday">T</button>
+    <button class="butt butt1" id="wednesday">W</button>
+    <button class="butt butt2" id="thursday">Th</button>
+    <button class="butt butt1" id="friday">F</button>
+    <button class="butt butt2" id="saturday">Sa</button>
+    <button class="butt butt1" id="sunday">S</button>
   </div>
   <div class="right">
     <div class="top">
       <h2 id="week">Monday</h2>
       <ul class="dot">
-        <li class="li1">Solve two easy problems on Leetcode</li>
-        <li class="li2">Study CSCI materials for Interview questions</li>
-        <li class="li3">Go get ice cream with a friend</li>
+        <li id="li1">Solve two easy problems on Leetcode</li>
+        <li id="li2">Study CSCI materials for Interview questions</li>
+        <li id="li3">Go get ice cream with a friend</li>
       </ul>
-      <!-- <script>
+      <script>
       const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-      const menu = [["Solve two easy problems on Leetcode","Study CSCI materials for Interview questions","Go get ice cream with a friend","Drink Sweet drink"],
+      const menu = [["Solve two easy problems on Leetcode","Study CSCI materials for Interview questions","Go get ice cream with a friend"],
                 ["Drink cold brew with hazelnut syrup and cream","Study Database midterm","Take Full-time job Interview"],
                 ["Solve two matrix problems on Leetcode","Drink homemade peppermint milk tea","Play League of Legends"],
                 ["Work on AI homework on campus","Drink homemade cold brew coffee","Do Web homework and quiz"],
@@ -44,44 +44,94 @@
                 ["Solve two easy DFS/BFS problems on Leetcode","Eat Chinese hot pot","Go workout for 2 hours"],
                 ["Do Database homework","Go to Starbucks to study","Play League of Legends"]];
       const todayColor = ["“Magenta” #FF00FF", "“Royal Blue” #4169e1", "“Pastel Pink” #FFD1DC", "“Bumble Bee” #FCE205", "“Espresso” #4B382A", "“Azure” #0080FE", "“Forest Green” #228B22"]
-      let count = 0;
 
-      document.getElementById("monday").addEventListener("click", mClicked);
-      document.getElementById("tuesday").addEventListener("click", tClicked);
-      document.getElementById("wednesday").addEventListener("click", wClicked);
-      document.getElementById("thursday").addEventListener("click", thClicked);
-      document.getElementById("friday").addEventListener("click", fClicked);
-      document.getElementById("saturday").addEventListener("click", saClicked);
-      document.getElementById("sunday").addEventListener("click", sClicked);
+      document.getElementById("monday").addEventListener("click", function(){ClickedDay("monday")});
+      document.getElementById("tuesday").addEventListener("click", function(){ClickedDay("tuesday")});
+      document.getElementById("wednesday").addEventListener("click", function(){ClickedDay("wednesday")});
+      document.getElementById("thursday").addEventListener("click", function(){ClickedDay("thursday")});
+      document.getElementById("friday").addEventListener("click", function(){ClickedDay("friday")});
+      document.getElementById("saturday").addEventListener("click", function(){ClickedDay("saturday")});
+      document.getElementById("sunday").addEventListener("click", function(){ClickedDay("sunday")});
 
-      function mClicked(){
-        console.log(weekdays[0]);
-        console.log(menu[0]);
-        console.log(todayColor[0]);
-        // document.getElementById("first").innerHTML = q1[0];
-        // document.getElementById("second").innerHTML = q2[count];
+      function ClickedDay(day){
+
+        document.getElementById("clr").innerHTML = todayColor[Math.floor(Math.random()*todayColor.length)] ;
+
+        if(day == "monday"){
+          document.getElementById("week").innerHTML = weekdays[0];
+          document.getElementById("li1").innerHTML = menu[0][0];
+          document.getElementById("li2").innerHTML = menu[0][1];
+          document.getElementById("li3").innerHTML = menu[0][2];
+
+        }
+        else if(day == "tuesday"){
+          document.getElementById("week").innerHTML = weekdays[1];
+          document.getElementById("li1").innerHTML = menu[1][0];
+          document.getElementById("li2").innerHTML = menu[1][1];
+          document.getElementById("li3").innerHTML = menu[1][2];
+        }
+        else if(day == "wednesday"){
+          document.getElementById("week").innerHTML = weekdays[2];
+          document.getElementById("li1").innerHTML = menu[2][0];
+          document.getElementById("li2").innerHTML = menu[2][1];
+          document.getElementById("li3").innerHTML = menu[2][2];
+        }
+        else if(day == "thursday"){
+          document.getElementById("week").innerHTML = weekdays[3];
+          document.getElementById("li1").innerHTML = menu[3][0];
+          document.getElementById("li2").innerHTML = menu[3][1];
+          document.getElementById("li3").innerHTML = menu[3][2];
+        }
+        else if(day == "friday"){
+          document.getElementById("week").innerHTML = weekdays[4];
+          document.getElementById("li1").innerHTML = menu[4][0];
+          document.getElementById("li2").innerHTML = menu[4][1];
+          document.getElementById("li3").innerHTML = menu[4][2];
+        }
+        else if(day == "saturday"){
+          document.getElementById("week").innerHTML = weekdays[5];
+          document.getElementById("li1").innerHTML = menu[5][0];
+          document.getElementById("li2").innerHTML = menu[5][1];
+          document.getElementById("li3").innerHTML = menu[5][2];
+        }
+        else if(day == "sunday"){
+          document.getElementById("week").innerHTML = weekdays[6];
+          document.getElementById("li1").innerHTML = menu[6][0];
+          document.getElementById("li2").innerHTML = menu[6][1];
+          document.getElementById("li3").innerHTML = menu[6][2];
+        }
+
       }
-      // function buttonClicked(){
-      //   console.log(q1[count]);
-      //   console.log(q2[count]);
-      //   document.getElementById("first").innerHTML = q1[count];
-      //   document.getElementById("second").innerHTML = q2[count];
-      //   if(count>=7){
-      //     count = 0;
-      //   }else{
-      //   count++;
-      // }
-      // }
 
-      </script> -->
+      </script>
     </div>
     <div class="botleft">
       <h3 id="td">Today's Color</h3>
       <h4 id="clr">“Magenta” #FF00FF</h4>
     </div>
     <div class="botright">
-      <h4 id="date">Oct 26th Monday 2021</h4>
-      <h3 id="time">11:34 AM</h3>
+      <div class="date">
+        <h4 id="month">10</h4>
+        <h4>/</h4>
+        <h4 id="day">26</h4>
+        <h4 id="day2">Monday
+        </h4><h4 id="year">2021</h4>
+      </div>
+    <div class="time">
+      <p id="hour">11</p>
+      <p>:</p>
+      <p id="minute">35</p>
+      </div>
+    <script>
+      const d = new Date();
+      const days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      document.getElementById("month").innerHTML = d.getMonth()+1;
+      document.getElementById("day").innerHTML = d.getDate();
+      document.getElementById("day2").innerHTML = days[d.getDay()];
+      document.getElementById("year").innerHTML = d.getFullYear();
+      document.getElementById("hour").innerHTML = d.getHours();
+      document.getElementById("minute").innerHTML = d.getMinutes();
+    </script>
     </div>
   </div>
   </div>
